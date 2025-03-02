@@ -9,9 +9,8 @@ completeBtns.forEach(function (completeBtn) {
         const pTag = document.createElement("p");
         const time = new Date();
         const currentTime = time.toLocaleTimeString();
-        // const card = completeBtn.closest(".card ");
-        // const cardTitle = card.querySelector (".card-title").innerText;
-        pTag.innerText = `You have Complete The Task  ${currentTime}`;
+        const card = completeBtn.parentNode.parentNode.childNodes[3].childNodes[1].innerText;
+        pTag.innerText = `You have Complete The Task  ${card}  ${currentTime}`;
         pTag.style.backgroundColor = "#d3d3d3";
         pTag.style.padding = "5px";
         pTag.style.borderRadius = "5px";
